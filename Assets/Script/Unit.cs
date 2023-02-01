@@ -14,7 +14,8 @@ public class Unit : MonoBehaviour
     const float Max_hp          = 9999;     //耐久最大値
 
     //定数
-    
+    const float Bullet_SpeedUp = 2.0f;      //ユニットの速度の何倍にするか
+
     /// <summary>海上/海中/空中のいずれか</summary>
     public enum ClassType
     {
@@ -33,14 +34,16 @@ public class Unit : MonoBehaviour
     UnitSensor antiUnitSensor;              //ユニットセンサー
     UnitSensor antiBaseSensor;              //ベースセンサー
 
-    //基本ステータス
-    public bool  enemyUnit     = false;     //エネミーユニットフラグ
-    public float b_atk         = 3;         //攻撃力/Bulletへ
-    public float cost          = 100;       //召喚コスト
-    public float speed         = 1.0f;      //ユニットの進軍速度
-    public float atkInterval   = 5.0f;      //弾の発射間隔
-    public float hp            = 30.0f;     //ユニットの耐久値
-    public float spawnInterval = 3.0f;      //スポーン間隔
+    //基本ステータス/仮値
+    public bool  enemyUnit         = false;     //エネミーユニットフラグ
+    public float b_atk             = 3;         //攻撃力/Bulletへ
+    public float b_destroyDistance = 3.5f;      //弾破壊距離/Bulletへ
+    public float cost              = 100;       //召喚コスト
+    public float speed             = 1.0f;      //ユニットの進軍速度
+    public float atkInterval       = 5.0f;      //弾の発射間隔
+    public float hp                = 30.0f;     //ユニットの耐久値
+    public float spawnInterval     = 3.0f;      //スポーン間隔
+
 
     //バフ値
     public int   cost_Buff          = 0;     //コストを安くする変数
@@ -64,7 +67,7 @@ public class Unit : MonoBehaviour
     public bool encounter = false;
 
     //プライベート変数
-    int nowBullet  = 0;                  //現在の発射弾管理
+    int nowBullet = 0;                  //現在の発射弾管理
 
 
     /// <summary>
@@ -236,20 +239,26 @@ public class Unit : MonoBehaviour
         for (int i = 0; i < 2; i++) {
             //弾スクリプトをセット
             bulletScript[i] = bullet[i].GetComponent<Bullet>();
+
             //弾にユニットの2倍のスピードをセット
-            bulletScript[i].speed = (speed * (2f));
+            bulletScript[i].speed = (speed * Bullet_SpeedUp);
+
+            //弾破壊距離をセット
+            bulletScript[i].destroyDistance = b_destroyDistance;
+
+            //同じクラスのバレットをセット
+            if (classType == ClassType.Sea)   { bulletScript[i].classType = Bullet.ClassType.Sea; }
+            if (classType == ClassType.InSea) { bulletScript[i].classType = Bullet.ClassType.InSea; }
+            if (classType == ClassType.Sky)   { bulletScript[i].classType = Bullet.ClassType.Sky; }
+
             //敵ユニットである場合弾のフラグも変更
             bulletScript[i].enemyBullet = enemyUnit;
-            if (i == 1)
-            {
-                //強攻撃値をセット
-                bulletScript[i].atk = (b_atk * StrongBulletBuff);
-            }
-            else
-            {
-                //通常攻撃値をセット
-                bulletScript[i].atk = b_atk;
-            }
+
+            //1の場合のみ強攻撃をセット
+            if (i == 1) { bulletScript[i].atk = (b_atk * StrongBulletBuff); }
+            else        { bulletScript[i].atk = b_atk; }
+
+            //攻撃バフをセット
             bulletScript[i].atk_Buff = b_atk_Buff;
         }
     }
@@ -275,9 +284,6 @@ public class Unit : MonoBehaviour
 
     void Update()
     {
-        //何故かカメラを動かすとバグるので仮処理/UnitSpawnにもある
-        //hpSlider.value = hp;
-
         if (encounter == true)
         {
             //接敵処理

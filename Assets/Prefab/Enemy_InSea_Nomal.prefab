@@ -115,10 +115,10 @@ MonoBehaviour:
   enemyUnit: 1
   b_atk: 6
   cost: 100
-  speed: 1
+  speed: 0.7
   atkInterval: 1
   hp: 48
-  spawnInterval: 25
+  spawnInterval: 22
   cost_Buff: 0
   speed_Buff: 0
   atkInterval_Buff: 0
@@ -497,6 +497,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6762233257021009949, guid: 33477a1fa89d0c947bcf299433ccec4f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6762233257592533625, guid: 33477a1fa89d0c947bcf299433ccec4f, type: 3}
+      propertyPath: m_Interactable
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

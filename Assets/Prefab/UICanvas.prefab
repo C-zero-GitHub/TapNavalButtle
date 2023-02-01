@@ -263,6 +263,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5216095896317313820, guid: 3da342182133422478dd60b823245bfa, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5216095896317313890, guid: 3da342182133422478dd60b823245bfa, type: 3}
       propertyPath: m_Name
       value: Base_HPBar_P

@@ -20,19 +20,24 @@ public class Bullet : MonoBehaviour
         InSea,
         Sky
     }
+    [System.NonSerialized]
     public ClassType classType;
 
     //処理用変数
-    float destroyDistance = 3.5f; //この距離進んだら削除
-    Vector3 destroyPos;                 //生成時の座標.x+DestroyPosPlus.x
+    Vector3 destroyPos;           //生成時の座標.x+DestroyPosPlus.x
 
     //基本ステータス/Unitから決定
-    public bool enemyBullet;    //敵の場合true
-    public float speed;         //前進速度
-    public float atk;           //攻撃力
+    //[System.NonSerialized]
+    public bool enemyBullet;      //敵の場合true
+    //[System.NonSerialized]
+    public float speed;           //前進速度
+    //[System.NonSerialized]
+    public float atk;             //攻撃力
+    //[System.NonSerialized]
+    public float destroyDistance; //この距離進んだら削除
     //バフ/Unitから決定
-    public float speed_Buff;    //前進速度プラス値
-    public float atk_Buff;      //攻撃力プラス値
+    //[System.NonSerialized]
+    public float atk_Buff;        //攻撃力プラス値
 
     //ゲームオブジェクト
     Rigidbody2D rb;

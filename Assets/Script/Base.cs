@@ -60,9 +60,4 @@ public class Base : MonoBehaviour
         }
     }
 
-    private void Update()
-    {
-        //‰½ŒÌ‚©ƒJƒƒ‰‚ğ“®‚©‚·‚ÆƒoƒO‚é‚Ì‚Å‰¼ˆ—
-        hpSlider.value = hp;
-    }
 }

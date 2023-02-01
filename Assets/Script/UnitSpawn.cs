@@ -427,12 +427,6 @@ public class UnitSpawn : MonoBehaviour
 
     void Update()
     {
-        //何故かカメラを動かすとバグるので仮処理/Unitにもある
-        for (int i = 0; i < 8; i++)
-        {
-            //spawnIntervalSliders[i].value = playerSpawnInterval[i];
-        }
-
         //コスト増加処理
         AddCost();
 
@@ -462,7 +456,7 @@ public class UnitSpawn : MonoBehaviour
 
         //エネミーデバッグ
         {
-            /*if (Input.GetKeyDown(KeyCode.Z))
+            if (Input.GetKeyDown(KeyCode.Z))
             {
                 EnemySpawn(0);
             }
@@ -495,7 +489,7 @@ public class UnitSpawn : MonoBehaviour
                 EnemySpawn(7);
             }
             print(enemySpawnCost);
-            */
+            
         }
     }
 }
