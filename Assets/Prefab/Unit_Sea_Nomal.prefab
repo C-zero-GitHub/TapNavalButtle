@@ -240,6 +240,7 @@ MonoBehaviour:
   unitSpawn: {fileID: 0}
   enemyUnit: 0
   b_atk: 4
+  b_destroyDistance: 3.5
   cost: 100
   speed: 1
   atkInterval: 1

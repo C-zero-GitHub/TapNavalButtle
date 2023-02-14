@@ -43,13 +43,18 @@ public class Camera : MonoBehaviour
     /// <summary>
     /// キー入力でカメラを動かす。
     /// </summary>
-    void CameraMove() {         
+    public void CameraMove(float move_x) {         
         //左右キー入力
         var hor = Input.GetAxis("Horizontal");
 
         transform.position = new Vector3(
             Mathf.Clamp(
             transform.position.x + (hor * speed * Time.deltaTime), Min_X, Max_X),
+            -2.8f, -10);
+
+        transform.position = new Vector3(
+            Mathf.Clamp(
+            transform.position.x + (move_x * speed * Time.deltaTime), Min_X, Max_X),
             -2.8f, -10);
     }
 
@@ -60,6 +65,6 @@ public class Camera : MonoBehaviour
 
     void Update()
     {
-        CameraMove();
+        CameraMove(0);
     }
 }
