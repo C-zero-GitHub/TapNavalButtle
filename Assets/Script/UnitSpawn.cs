@@ -13,13 +13,13 @@ using UnityEngine.UI;
 public class UnitSpawn : MonoBehaviour
 {
     //定数
-    const int   UnitObjectLimit         = 8;       //編成上限
+    const int   UnitObjectLimit         = 3;       //編成上限(最大値は8実装ユニットが3の為現在は3)
     const int   SpawnLimit              = 50;      //召喚上限
     const float IntervalSpeed           = 5;       //インターバルスピード
-    const float TextTimer               = 10;       //テキスト表示時間/定数
+    const float TextTimer               = 10;      //テキスト表示時間/定数
 
     //プライベート処理用変数
-    float PlayerCostUpSpeed = 7;              //プレイヤーコストアップ間隔
+    float PlayerCostUpSpeed = 10;             //プレイヤーコストアップ間隔
     float EnemyCostUpSpeed  = 7;              //エネミーコストアップ間隔
     float enemySpawnCost;                     //エネミー残りコスト
     float intervalTextTimer;                  //テキスト表示時間/処理用
@@ -66,8 +66,8 @@ public class UnitSpawn : MonoBehaviour
 
 
     /*
-    スタートでGetコンポーネントする。絶対。そして[System.NonSerialized]する。
-    GameObjectSet()でやる
+    スタートでGetコンポーネントする。
+    GameObjectSet()でやる。
     */
     public Slider[] spawnIntervalSliders     //ユニット毎の召喚間隔シリンダー
         = new Slider[UnitObjectLimit];
@@ -306,7 +306,7 @@ public class UnitSpawn : MonoBehaviour
         PlayerCostUpSpeed += antiSpSpawnPlayerCostSpeedUp;
         warningText.SetActive(true);
         warningTextTimer = TextTimer;
-        //遅くする処理/未完なので一端除外
+        //ゲームを遅くする処理/未完なので一端除外
         //Time.timeScale = 0.3f;
         for (int j = 0; j < UnitObjectLimit; j++)
         {
@@ -454,7 +454,7 @@ public class UnitSpawn : MonoBehaviour
         }
         */
 
-        //エネミーデバッグ
+        /*エネミーデバッグ
         {
             if (Input.GetKeyDown(KeyCode.Z))
             {
@@ -490,6 +490,6 @@ public class UnitSpawn : MonoBehaviour
             }
             print(enemySpawnCost);
             
-        }
+        }*/
     }
 }

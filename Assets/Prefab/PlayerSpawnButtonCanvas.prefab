@@ -3703,7 +3703,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8288264911052172292}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -3836,7 +3836,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8288264911638004318}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4068,35 +4068,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fab853ef205b0d4cb3c5b5011a2be25, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerSpawnCnt: 0
-  enemySpawnCnt: 0
-  playerSpawnInterval:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  enemySpawnInterval:
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
+  playerSpawnCost: 0
   spawnPlayerObject:
   - {fileID: 6233522516883344699, guid: c942e70341d73994b89461102192533d, type: 3}
   - {fileID: 4034027070821869775, guid: d447568f3c61f244480135a84ef69e7d, type: 3}
   - {fileID: 7677150085120796534, guid: 38396651ecf01a546a7057de1540f5fc, type: 3}
-  - {fileID: 7677150085120796534, guid: 38396651ecf01a546a7057de1540f5fc, type: 3}
-  - {fileID: 6233522516883344699, guid: c942e70341d73994b89461102192533d, type: 3}
-  - {fileID: 4034027070821869775, guid: d447568f3c61f244480135a84ef69e7d, type: 3}
-  - {fileID: 7677150085120796534, guid: 38396651ecf01a546a7057de1540f5fc, type: 3}
-  - {fileID: 6233522516883344699, guid: c942e70341d73994b89461102192533d, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   spawnEnemyObject:
   - {fileID: 8340522995318758031, guid: c1a3f9cb6a56db24c83bacf46645e818, type: 3}
   - {fileID: 8576405094883662581, guid: c709573a68d558f4a882be0248cf5e52, type: 3}
@@ -4106,24 +4087,6 @@ MonoBehaviour:
   - {fileID: 8576405094883662581, guid: c709573a68d558f4a882be0248cf5e52, type: 3}
   - {fileID: 8576405094883662581, guid: c709573a68d558f4a882be0248cf5e52, type: 3}
   - {fileID: 3133893707719607340, guid: 29fcbbadbcb84f8499fa5b161f0ec19d, type: 3}
-  playerUnitScript:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  enemyUnitScript:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   spawnIntervalSliders:
   - {fileID: 7478992350720967606}
   - {fileID: 3492316167014009717}
@@ -4139,7 +4102,7 @@ MonoBehaviour:
   noCostText: {fileID: 8506512233093684412}
   warningText: {fileID: 8811054121639909208}
   warningDisplayTimeText: {fileID: 7357115134978907725}
-  au: {fileID: 0}
+  audioSource: {fileID: 0}
   warningSe: {fileID: 8300000, guid: 59f06ba20cf941041a9a1c71cb3344bd, type: 3}
 --- !u!82 &1616170903362705239
 AudioSource:
@@ -4454,7 +4417,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8288264912362908090}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4587,7 +4550,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8288264912478272554}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 
@@ -4720,7 +4683,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8288264912620417692}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
   m_Name: 

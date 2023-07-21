@@ -1440,11 +1440,6 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 20
   m_TargetDisplay: 0
---- !u!82 &1766138211 stripped
-AudioSource:
-  m_CorrespondingSourceObject: {fileID: 1616170903362705239, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-  m_PrefabInstance: {fileID: 8288264913106303115}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1862883380
 GameObject:
   m_ObjectHideFlags: 0
@@ -1820,6 +1815,14 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 7970956822805304552, guid: a3e0909f544c7294ca4899a7e4556f9b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8077106385643771175, guid: a3e0909f544c7294ca4899a7e4556f9b, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a3e0909f544c7294ca4899a7e4556f9b, type: 3}
 --- !u!1001 &7878086177301132006
@@ -1917,42 +1920,6 @@ PrefabInstance:
     - target: {fileID: 6650729333686589271, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264911052172314, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264911638004316, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264911707629460, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: au
-      value: 
-      objectReference: {fileID: 1766138211}
-    - target: {fileID: 8288264911707629460, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: enemySpawnCnt
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264911707629460, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: playerSpawnCnt
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264911707629460, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: playerSpawnCost
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264912362908088, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264912478272552, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8288264912620417682, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8288264913001980644, guid: 747da88a67e41e54d9be1a9606c6576a, type: 3}
       propertyPath: m_Name
